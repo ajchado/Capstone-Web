@@ -23,22 +23,6 @@ class dashboardView(View):
         
         return render(request, 'dashboard.html')
 
-# class loginView(View):
-#     def get(self, request):
-#         return render(request, 'login.html')
-
-#     def post(self, request):
-#         uname = request.POST.get('username')
-#         pwd = request.POST.get('password')
-
-#         if User.objects.filter(pk=uname).count() != 0:
-#             account = User.objects.get(pk=uname)
-            
-#             if account.password == pwd:
-#                 return render(request, 'home.html')
-        
-#         return render(request, 'login.html')
-
 class loginView(View):
 
     def get(self, request):
@@ -55,21 +39,31 @@ class loginView(View):
         return render(request, 'home.html')
 
 class registerView(View):
-     def get(self, request):
+    def get(self, request):
         return render(request, 'register.html')
 
-     def post(self, request):
+    def post(self, request):
         form = UserForm(request.POST)       
         if form.is_valid():
             form.save()
         return render(request, 'register.html')
 
-class settingsView(View):
-    def get(self, request):
-        
-        return render(request, 'settings.html')
-
 class userView(View):
     def get(self, request):
         
         return render(request, 'user.html')
+
+class accountsettingsView(View):
+    def get(self, request):
+        
+        return render(request, 'account-settings.html')
+
+class changepasswordView(View):
+    def get(self, request):
+        
+        return render(request, 'change-password.html')
+
+class publicprofileView(View):
+    def get(self, request):
+        
+        return render(request, 'public-profile.html')
