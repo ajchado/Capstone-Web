@@ -1,31 +1,47 @@
 body{
     font-family: 'Raleway', sans-serif;
-    background: #f9f9f9;
+    background: rgb(187,187,245);
 }
-.p-30{
+
+.dashboard-section{
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.dashboard-section .p-30{
     padding:30px;
 }
-.main-datatable {
+
+.dashboard-section .main-datatable {
     padding: 0px; 
     border: 1px solid #f3f2f2;
     border-bottom: 0;
     box-shadow: 0px 2px 10px rgba(0,0,0,.05);
 }
-.d-flex{
+
+.dashboard-section .d-flex{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.card_body{ 
+
+.dashboard-section .card_body{ 
     background-color: white;
     border: 1px solid transparent;
     border-radius: 2px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
+
 .main-datatable .row {
     margin: 0;
 } 
+
 .searchInput {
     width: 50%;
     display: flex;
@@ -35,6 +51,7 @@ body{
     margin: 20px 0px;
     padding: 0px 4px;
 }
+
 .searchInput input {
     border: 1px solid #e5e5e5;
     border-radius: 50px;
@@ -44,17 +61,21 @@ body{
     padding: 0px 25px 0px 10px;
     transition: all .6s ease;
 }
+
 .searchInput label {
     color: #767676;
     font-weight: normal;
 }
+
 .searchInput input:placeholder-shown {
     width: 13%;
 }
+
 .searchInput:hover input:placeholder-shown {
     width: 100%;
     cursor: pointer;
 }
+
 .searchInput:after {
     font-family: 'FontAwesome';
     color: #d4d4d4;
@@ -77,6 +98,7 @@ body{
     font-weight: 600;
     margin-bottom: 20px;
 } 
+
 .createSegment a { 
     margin-bottom: 0px;
     border-radius: 50px;
@@ -85,22 +107,27 @@ body{
     color: #007bff;
     transition: all .4s ease;
 }
+
 .createSegment a:hover, .createSegment a:focus {
     transition: all .4s ease;
     background: #007bff;
     color: #fff;
 }
+
 .add_flex{
     display: flex;
     justify-content: flex-end;
     padding-right:0px;
 }
+
 .main-datatable .dataTable.no-footer {
     border-bottom: 1px solid #eee;
 }
+
 .main-datatable .cust-datatable thead {
     background-color: #f9f9f9;
 }
+
 .main-datatable .cust-datatable>thead>tr>th {
     border-bottom-width: 0;
     color: #443f3f;
@@ -110,6 +137,7 @@ body{
     padding-left: 18px;
     text-align: center;
 }
+
 .main-datatable .cust-datatable>tbody td {
     padding: 10px 15px 10px 18px;
     color: #333232;
@@ -120,15 +148,19 @@ body{
     text-align: center;
     vertical-align: middle;
 }
+
 .main-datatable .cust-datatable>tbody tr {
     border-top: none;
 }
+
 .main-datatable .table > tbody > tr:nth-child(even) {
     background: #f9f9f9;
 }
+
 .btn-group.open .dropdown-toggle {
     box-shadow: none;
 }
+
 .main-datatable .dropdown_icon {
     display: inline-block;
     color: #8a8a8a;
@@ -138,10 +170,12 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
+
 .btn-group i{
     color: #8e8e8e; 
     margin: 2px;
 }
+
 .main-datatable .actionCust a {
     display: inline-block;
     color: #8a8a8a;
@@ -152,10 +186,12 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
+
 .main-datatable .actionCust a i{
     color: #8e8e8e;
     margin: 2px;
 }
+
 .main-datatable .dropdown-menu {
     padding: 0;
     border-radius: 4px;
@@ -255,19 +291,11 @@ body{
 .mode_done{
     background-color: #03a9f3;
 }
-@media only screen and (max-width:1200px){
-    .overflow-x{
-        overflow-x:scroll;
-    }
-    .overflow-x::-webkit-scrollbar{
-        width:5px;
-        height:6px;
-    }
-    .overflow-x::-webkit-scrollbar-thumb{
-        background-color: #888;
-    }
-    .overflow-x::-webkit-scrollbar-track{
-         background-color: #f1f1f1;
-    }
-}
 
+.dashboard-section .text{
+    display: inline-block;
+    color: #11101d;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px
+} 

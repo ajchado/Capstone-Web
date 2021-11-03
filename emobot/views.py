@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm
 from django.contrib import messages
+
 # Create your views here.
 class homeView(View):
     def get(self, request):
@@ -20,22 +21,6 @@ class dashboardView(View):
     def get(self, request):
         
         return render(request, 'dashboard.html')
-
-# class loginView(View):
-#     def get(self, request):
-#         return render(request, 'login.html')
-
-#     def post(self, request):
-#         uname = request.POST.get('username')
-#         pwd = request.POST.get('password')
-
-#         if User.objects.filter(pk=uname).count() != 0:
-#             account = User.objects.get(pk=uname)
-            
-#             if account.password == pwd:
-#                 return render(request, 'home.html')
-        
-#         return render(request, 'login.html')
 
 class loginView(View):
 
@@ -49,6 +34,7 @@ class loginView(View):
             password = request.POST.get("password")
             user = authenticate(request, username = username, password = password)
 
+            
         return render(request, 'home.html')
 
 class registerView(View):
@@ -66,12 +52,23 @@ class registerView(View):
                 form.save()
                 messages.success(request,'The user has been successfully registered!', extra_tags = 'successful')
             return render(request, 'register.html')
-class settingsView(View):
-    def get(self, request):
-        
-        return render(request, 'settings.html')
 
 class userView(View):
     def get(self, request):
         
         return render(request, 'user.html')
+
+class accountsettingsView(View):
+    def get(self, request):
+        
+        return render(request, 'account-settings.html')
+
+class changepasswordView(View):
+    def get(self, request):
+        
+        return render(request, 'change-password.html')
+
+class publicprofileView(View):
+    def get(self, request):
+        
+        return render(request, 'public-profile.html')

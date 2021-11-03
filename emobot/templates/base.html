@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
     <link rel="stylesheet" href="{% static '/css/datatable.css' %}">
     <link rel="stylesheet" href="{% static '/css/home.css' %}">
-    <link rel="stylesheet" href="{% static '/css/settings.css' %}">
+    <link rel="stylesheet" href="{% static '/css/setting.css' %}">
+    <link rel="stylesheet" href="{% static '/css/account-settings.css' %}">
+    <link rel="stylesheet" href="{% static '/css/change-password.css' %}">
+    <link rel="stylesheet" href="{% static '/css/public-profile.css' %}">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +54,7 @@
             <span class="tooltip">User</span>
             </li>
             <li>
-            <a href="{% url 'emobot:settings' %}">
+            <a href="{% url 'emobot:public-profile' %}">
                 <i class='bx bx-cog' ></i>
                 <span class="links_name">Settings</span>
             </a>
@@ -80,4 +83,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.14/js/jquery.dataTables.min.js"></script>
     <script src="{% static '/js/datatable.js' %}"></script>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+                icon.src = "/static/img/sun.png";
+        }else{
+                icon.src = "/static/img/moon.png"
+        }
+        }
+    </script>
 {% endblock footerinclude %}
