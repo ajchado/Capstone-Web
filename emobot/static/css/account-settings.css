@@ -168,31 +168,48 @@ form .button input:hover{
 }
 
 span.ddetails{
-    display: block;
+    position: relative;
     font-weight: 500;
-    margin-top: 120px;
-    margin-left: -315px;
+    margin-right: 90px;
+    padding-left: 50px;
 }
 
 .dtitle{
-    margin-top: 80px;
-    margin-left: -350px;
+    margin-top: 10px;
+    margin-left: 50px;
+    padding-left: 60px;
     font-size: 25px;
     font-weight: 500;
     position: relative;
     color: var(--secondary-color);
 }
 
-#delete{
+/* #delete{
     font-size: 16px;
     font-weight: 500;
     color: var(--secondary-color);
     margin-top: 80px;
-    width: 30%;
+    width: 100%;
     background: linear-gradient(135deg, #bbe1e4, #cd5de4);
 }
 
 #delete:hover{
-    /* transform: scale(0.99); */
+    transform: scale(0.99);
+    background: linear-gradient(-135deg, #e27272, #500303);
+} */
+
+.acontainer .content a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    background: linear-gradient(135deg, #bbe1e4, #cd5de4);
+    margin-top: -50px;
+    margin-left: 450px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.acontainer .content a:hover{
     background: linear-gradient(-135deg, #e27272, #500303);
 }
