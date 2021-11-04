@@ -9,36 +9,6 @@
 
 {% block content %}
   <div class="container">
-
-  <!-- successfuly registered message-->
-  <div>
-  <center>
-    <div style="color: green;">
-      {%for message in messages %}
-           {%if "successful" in message.tags %}
-                <p> {{message}} </p>   
-           {%endif%}
-      {%endfor%}
-    </div>  
-    <div style="color: red;">
-      {%for message in messages %}
-           {%if "password_error" in message.tags %}
-                <p> {{message}} </p>   
-           {%endif%}
-      {%endfor%}
-    </div>
-    <div style="color: red;">
-      {%for message in messages %}
-           {%if "user_error" in message.tags %}
-                <p> {{message}} </p>   
-           {%endif%}
-      {%endfor%}
-    </div>
-  </center> 
-  </div>
-  <br>
-
-
     <div class="title">Registration</div>
     <div class="content">
       <form action="" method="POST">
@@ -69,7 +39,7 @@
             <input type="password" name="confirm_password" placeholder="Confirm your password" required>
           </div>
         </div>
-        <div class="gender-details" required>
+        <div class="gender-details">
           <input type="radio" name="gender" id="dot-1" value="Male">
           <input type="radio" name="gender"  id="dot-2" value="Female">
           <input type="radio" name="gender"  id="dot-3" value="Prefer not to say">

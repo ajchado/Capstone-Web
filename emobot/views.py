@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm
-from django.contrib import messages
+
+
 
 # Create your views here.
 class homeView(View):
@@ -38,20 +39,14 @@ class loginView(View):
         return render(request, 'home.html')
 
 class registerView(View):
-     def get(self, request):
+    def get(self, request):
         return render(request, 'register.html')
 
-     def post(self, request):
-        if request.method == 'POST':
-            form = UserForm(request.POST)      
-            password = request.POST.get("password")
-            confirm_password = request.POST.get("confirm_password")
-            if (password != confirm_password ):
-                messages.error(request, 'Password does not match!', extra_tags = 'password_error')
-            elif form.is_valid():
-                form.save()
-                messages.success(request,'The user has been successfully registered!', extra_tags = 'successful')
-            return render(request, 'register.html')
+    def post(self, request):
+        form = UserForm(request.POST)       
+        if form.is_valid():
+            form.save()
+        return render(request, 'register.html')
 
 class userView(View):
     def get(self, request):
@@ -72,3 +67,8 @@ class publicprofileView(View):
     def get(self, request):
         
         return render(request, 'public-profile.html')
+
+class deleteaccountsView(View):
+    def get(self, request):
+        
+        return render(request, 'delete-account.html')

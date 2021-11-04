@@ -14,4 +14,5 @@ urlpatterns = [
     path('settings/account-settings', views.accountsettingsView.as_view(), name="account-settings"),
     path('settings/change-password', views.changepasswordView.as_view(), name="change-password"),
     path('settings/public-profile', views.publicprofileView.as_view(), name="public-profile"),
+    path('settings/account-settings/delete-account', views.deleteaccountsView.as_view(), name="delete-account"),
 ]

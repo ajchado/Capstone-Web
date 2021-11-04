@@ -16,6 +16,7 @@
                   <img src="{% static '/img/profile.jpg' %}" class="profile">
                         <div div class="content1">
                               <form action="" method="POST">
+                                    {% csrf_token %}
                                     <div class="user-details1">
                                     <div class="input-box1">
                                     <span class="details1">Firstname</span>
@@ -31,10 +32,10 @@
                                     </div>
                                     </div>
                                     <div class="button1">
-                                          <input type="submit" value="Save" id="save1" name="save">
-                                          <input type="submit" value="Cancel" id="cancel1" name="cancel">
+                                          <input type="submit" value="Save" id="save" name="save">
                                     </div>
                               </form>
+                                    <a href="{% url 'emobot:public-profile' %}"><button> Cancel </button></a>
                         </div>
             </div>
       </div>
