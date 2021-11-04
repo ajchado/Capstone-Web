@@ -47,12 +47,14 @@
                         </div>
                         <div class="dtitle">Delete Account</div>
                         <span class="ddetails">Delete your account and account data</span>
-                        <a href="{% url 'emobot:delete-account' %}">Delete</a>
+                        <a class="adelete" href="{% url 'emobot:delete-account' %}">Delete</a>
                         <div class="button">
+                            <br>
                             <input type="submit" value="Save" id="save" name="save">
-                        </div>
                     </form>
-                        <a href="{% url 'emobot:account-settings' %}"><button> Cancel </button></a>
+                            <a href="{% url 'emobot:account-settings' %}"><button type="button" class="cancel"> Cancel </button></a>
+                        </div>
+                    
                 </div>
             </div>
     </div>

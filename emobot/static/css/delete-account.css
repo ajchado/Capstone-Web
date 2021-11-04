@@ -6,23 +6,24 @@
   font-family: 'Poppins',sans-serif;
 }
 
-.container{
+.dcontainer{
     max-width: 700px;
     width: 100%;
     background-color: var(--primary-color);
     padding: 25px 30px;
     border-radius: 5px;
     box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
-    margin: 100px 500px;
+    margin-top: 70px;
+    margin-left: 400px;
     height: 500px;
 }
-.container .title{
+.dcontainer .title{
     font-size: 25px;
     font-weight: 500;
     position: relative;
     color: var(--secondary-color);
 }
-.container .title::before{
+.dcontainer .title::before{
     content: "";
     position: absolute;
     left: 0;
@@ -32,7 +33,7 @@
     border-radius: 5px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
-.content form .user-details{
+.dcontent form .user-details{
     color: var(--secondary-color);
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +90,7 @@ form .button input:hover{
     background: linear-gradient(-135deg, #71b7e6, #9b59b6);
 }
 @media(max-width: 584px){
-    .container{
+    .dcontainer{
     max-width: 100%;
     }
     form .user-details .input-box{
@@ -108,7 +109,7 @@ form .button input:hover{
     }
     }
     @media(max-width: 459px){
-    .container .content .category{
+    .dcontainer .content .category{
         flex-direction: column;
     }
 }
@@ -140,7 +141,7 @@ form .button input:hover{
     margin-left: 320px;
 }
 
-button{
+button.cancel{
     height: 100%;
     width: 100%;
     border-radius: 5px;
@@ -155,6 +156,6 @@ button{
     margin-top: 10px;
 }
 
-button:hover{
+button.cancel:hover{
     background: linear-gradient(-135deg, #898b8d, #201e20);
 }
