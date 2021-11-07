@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from emobot.models import Admin, User
+from emobot.models import Admin, Person
 
 # Register your models here.
-admin.site.register(User)
+admin.site.register(Person)
 admin.site.register(Admin)
 
